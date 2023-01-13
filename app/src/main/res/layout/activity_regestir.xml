@@ -44,9 +44,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/book_icon"
             android:layout_centerInParent="true"
-            android:layout_marginTop="16dp"
 
-            android:text="Please Login"
+            android:layout_marginTop="16dp"
+            android:text="Create new aaccount"
             android:textColor="@color/white"
             android:textSize="30sp"
             android:textStyle="bold|italic" />

@@ -74,6 +74,14 @@ ActivityDasboardAdminBinding binding;
                 startActivity(intent);
             }
         });
+
+        binding.addpdf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(DasboardAdminActivity.this,PDF_Add_Activity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void loadCategory() {

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app2"
+    tools:context=".PDF_Add_Activity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/shape_login">
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="18dp"
+
+            android:background="@color/blue"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+        <ImageView
+            android:id="@+id/book_icon"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_below="@id/back_btn"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/book" />
+
+
+        <TextView
+            android:id="@+id/please_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/book_icon"
+
+            android:layout_centerInParent="true"
+            android:layout_marginTop="16dp"
+            android:text="Add a new Book"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold|italic" />
+
+        <ImageButton
+            android:id="@+id/attach_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/blue"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_baseline_attach_file_24"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+    </RelativeLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/book_til"
+        android:layout_width="match_parent"
+
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="225dp"
+
+        android:layout_height="wrap_content"
+
+        >
+
+
+        <EditText
+
+            android:id="@+id/book_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_bg1"
+            android:drawableStart="@drawable/ic_baseline_category_24"
+            android:drawablePadding="10dp"
+            android:textSize="19sp"
+
+            android:hint="Book Titel"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/description_til"
+        android:layout_width="match_parent"
+
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="8dp"
+         android:layout_below="@id/book_til"
+        android:layout_height="wrap_content"
+
+        app:hintEnabled="false"
+        >
+
+
+        <EditText
+
+            android:id="@+id/description_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_bg1"
+            android:drawableStart="@drawable/ic_baseline_picture_as_pdf_24"
+            android:drawablePadding="10dp"
+            android:hint="description Titel"
+            android:padding="10dp"
+            android:textSize="19sp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+
+        android:id="@+id/category_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/description_til"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/edittext_bg1"
+        android:drawableStart="@drawable/ic_baseline_category_24"
+        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+        android:drawablePadding="10dp"
+
+        android:hint="Book Category"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/category_tv"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/shape_login"
+        android:text="Upload"
+        android:textColor="@color/white"
+
+
+        />
+
+
+
+
+
+
+
+</RelativeLayout>
