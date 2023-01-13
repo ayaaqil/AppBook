@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "581579340537",
+    "firebase_url": "https://appbook-c4d4c-default-rtdb.firebaseio.com",
+    "project_id": "appbook-c4d4c",
+    "storage_bucket": "appbook-c4d4c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:581579340537:android:43a79e4474a1659e40c028",
+        "android_client_info": {
+          "package_name": "com.example.appbook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "581579340537-tm399a6n1n9ikt78cs91ubj5i5uara00.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDu-mkpUaaeyd35tFhSfTmH9v7gDyd4u0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "581579340537-tm399a6n1n9ikt78cs91ubj5i5uara00.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
