@@ -52,7 +52,7 @@ public class CategoryAddActivity extends AppCompatActivity {
     }
     String Category_name="";
     private void valideData() {
-    Category_name=binding.nameCategoryAdd.getEditText().getText().toString();
+    Category_name=binding.nameCategory.getText().toString();
 
     if(TextUtils.isEmpty(Category_name)){
         Toast.makeText(this, "please enter category", Toast.LENGTH_SHORT).show();

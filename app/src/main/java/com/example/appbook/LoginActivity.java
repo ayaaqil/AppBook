@@ -57,8 +57,8 @@ public class LoginActivity extends AppCompatActivity {
     }
      private String email="",password="";
     private void valideData() {
-        email=binding.emailLogin.getEditText().getText().toString();
-        password=binding.passwordLogin.getEditText().getText().toString();
+        email=binding.email.getText().toString();
+        password=binding.password.getText().toString();
 
 
          if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){

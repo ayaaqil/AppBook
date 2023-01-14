@@ -58,10 +58,10 @@ public class RegestirActivity extends AppCompatActivity {
     private String name="" ,email = "",password="",Cpassword="";
 
     private void valideData() {
-        name=binding.nameId.getEditText().getText().toString();
-        email=binding.email.getEditText().getText().toString();
-        password=binding.password.getEditText().getText().toString();
-        Cpassword=binding.CPasswordID.getEditText().getText().toString();
+        name=binding.name.getText().toString();
+        email=binding.emailEt.getText().toString();
+        password=binding.passwordEt.getText().toString();
+        Cpassword=binding.confirmPasword.getText().toString();
 
         if(TextUtils.isEmpty(name)){
             Toast.makeText(this, "enter your name", Toast.LENGTH_SHORT).show();
