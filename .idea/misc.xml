@@ -19,10 +19,14 @@
         <entry key="..\:/Users/mcc/AndroidStudioProjects/AppBook/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/mcc/AndroidStudioProjects/AppBook/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/mcc/AndroidStudioProjects/AppBook/app/src/main/res/layout/activity_pdf_add.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/mcc/AndroidStudioProjects/AppBook/app/src/main/res/layout/activity_pdf_detiles.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/mcc/AndroidStudioProjects/AppBook/app/src/main/res/layout/activity_pdf_edit.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/mcc/AndroidStudioProjects/AppBook/app/src/main/res/layout/activity_pdf_list_admin.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/mcc/AndroidStudioProjects/AppBook/app/src/main/res/layout/activity_regestir.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/mcc/AndroidStudioProjects/AppBook/app/src/main/res/layout/activity_splash.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/mcc/AndroidStudioProjects/AppBook/app/src/main/res/layout/activity_user_dashboard.xml" value="0.22" />
         <entry key="..\:/Users/mcc/AndroidStudioProjects/AppBook/app/src/main/res/layout/row_category.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/mcc/AndroidStudioProjects/AppBook/app/src/main/res/layout/row_pdf_admin.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>

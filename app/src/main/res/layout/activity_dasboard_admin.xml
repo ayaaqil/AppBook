@@ -51,16 +51,16 @@
         android:id="@+id/searsh_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
         android:layout_below="@id/toolbarRL"
-        android:textColorHint="@color/gray"
-        android:drawableStart="@drawable/ic_baseline_search_24"
-        android:background="#f3f3f3"
-        android:padding="10dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginStart="10dp"
-        android:hint="Searsh"/>
+        android:background="#f3f3f3"
+        android:drawableStart="@drawable/ic_baseline_search_24"
+        android:hint="Searsh"
+        android:padding="10dp"
+        android:textColorHint="@color/gray" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/category_list"

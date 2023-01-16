@@ -39,7 +39,7 @@ public class PDF_Add_Activity extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
 
-    private ArrayList<ModelCategory>modelCategoryArrayList;
+    private ArrayList<String>CategoryTitleArrayList,CategoryIdArrayList;
 
 
     @Override
@@ -85,11 +85,10 @@ public class PDF_Add_Activity extends AppCompatActivity {
 
 
     }
-     private  String titel="",description="",category="";
+     private  String titel="",description="";
     private void validateData() {
         titel=binding.bookEt.getText().toString();
         description=binding.descriptionEt.getText().toString();
-        category=binding.categoryTv.getText().toString();
 
 
         if(TextUtils.isEmpty(titel)){
@@ -97,7 +96,7 @@ public class PDF_Add_Activity extends AppCompatActivity {
 
         }else if(TextUtils.isEmpty(description)){
             Toast.makeText(this, "enter description", Toast.LENGTH_SHORT).show();
-        }else if(TextUtils.isEmpty(category)){
+        }else if(TextUtils.isEmpty(selectedCategoryTitle)){
             Toast.makeText(this, "enter category", Toast.LENGTH_SHORT).show();
 
 
@@ -151,9 +150,12 @@ public class PDF_Add_Activity extends AppCompatActivity {
         hashMap.put("id",""+timetamp);
         hashMap.put("titel",""+titel);
         hashMap.put("description",""+description);
-        hashMap.put("category",""+category);
+        hashMap.put("categoryId",""+selectedCategoryId);
         hashMap.put("url",""+uploadedpdfUrl);
         hashMap.put("timetamp",""+timetamp);
+        hashMap.put("viewsCount",""+timetamp);
+        hashMap.put("downloadsCount",""+timetamp);
+
 
         DatabaseReference databaseReference=FirebaseDatabase.getInstance().getReference("Books");
         databaseReference.child(""+timetamp).setValue(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -179,16 +181,22 @@ public class PDF_Add_Activity extends AppCompatActivity {
     }
 
     private void loadPdfcategory() {
-        modelCategoryArrayList=new ArrayList<>();
+        CategoryTitleArrayList=new ArrayList<>();
+        CategoryIdArrayList=new ArrayList<>();
         DatabaseReference databaseReference= FirebaseDatabase.getInstance().getReference("category");
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                modelCategoryArrayList.clear();
+                CategoryTitleArrayList.clear();
+                CategoryIdArrayList.clear();
                 for(DataSnapshot ds :snapshot.getChildren()){
-                    ModelCategory model=ds.getValue(ModelCategory.class);
 
-                    modelCategoryArrayList.add(model);
+                    String categoryId=""+ds.child("id").getValue();
+                    String categoryTitle=""+ds.child("category").getValue();
+
+                    CategoryTitleArrayList.add(categoryTitle);
+                    CategoryIdArrayList.add(categoryId);
+
                 }
             }
 
@@ -199,18 +207,23 @@ public class PDF_Add_Activity extends AppCompatActivity {
         });
 
     }
+    private String selectedCategoryId,selectedCategoryTitle;
 
     private void categoryPickDialog() {
-        String[] categoriesArray=new String[modelCategoryArrayList.size()];
-        for (int i =0;i<modelCategoryArrayList.size();i++){
-            categoriesArray[i]=modelCategoryArrayList.get(i).getCategory();
+        String[] categoriesArray=new String[CategoryTitleArrayList.size()];
+        for (int i =0;i<CategoryTitleArrayList.size();i++){
+            categoriesArray[i]=CategoryTitleArrayList.get(i);
         }
         AlertDialog.Builder builder=new AlertDialog.Builder(this);
         builder.setTitle("Pick category").setItems(categoriesArray, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-               String category=categoriesArray[i];
-               binding.categoryTv.setText(category);
+
+                selectedCategoryTitle=CategoryTitleArrayList.get(i);
+                selectedCategoryId=CategoryIdArrayList.get(i);
+
+                binding.categoryTv.setText(selectedCategoryTitle);
+
             }
         }).show();
 

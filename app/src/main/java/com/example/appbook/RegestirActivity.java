@@ -126,6 +126,7 @@ public class RegestirActivity extends AppCompatActivity {
                 progressDialog.dismiss();
                 Toast.makeText(RegestirActivity.this, "account created...", Toast.LENGTH_SHORT).show();
                 Intent intent=new Intent(RegestirActivity.this,User_dashboardActivity.class);
+
                 startActivity(intent);
                 finish();
 
